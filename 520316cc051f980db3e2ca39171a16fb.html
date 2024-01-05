@@ -151,7 +151,7 @@
           credentials: 'include'
         };
 
-        fetch("./api/manage/block/"+key, requestOptions)
+        fetch("./api/f4e84f8s4fe5f46s4fd5cvew4fgs4g845d/block/"+key, requestOptions)
           .then(response => response.text())
           .then(result => {console.log(result);
             this.tableData[index].metadata=result;})
@@ -172,7 +172,7 @@
           credentials: 'include'
         };
 
-        fetch("./api/manage/delete/"+key, requestOptions)
+        fetch("./api/f4e84f8s4fe5f46s4fd5cvew4fgs4g845d/delete/"+key, requestOptions)
           .then(response => response.text())
           .then(result => {console.log(result);this.tableData.remove(index);})
           .catch(error =>  {alert("An error occurred while synchronizing data with the server, please check the network connection");console.log('error', error)});
@@ -191,7 +191,7 @@
         //include authorization credientials
         credentials: 'include'
       };
-      fetch("./api/manage/white/"+key, requestOptions)
+      fetch("./api/f4e84f8s4fe5f46s4fd5cvew4fgs4g845d/white/"+key, requestOptions)
           .then(response => response.text())
           .then(result => {console.log(result);this.tableData[index].metadata=result;})
           .catch(error =>  {alert("An error occurred while synchronizing data with the server, please check the network connection");console.log('error', error)});
@@ -202,7 +202,7 @@
 
       },
       handleLogout(){
-        window.location.href="./api/manage/logout";
+        window.location.href="./api/f4e84f8s4fe5f46s4fd5cvew4fgs4g845d/logout";
       }
     },
       
@@ -215,7 +215,7 @@
         //include authorization credientials
         credentials: 'include'
       };
-      fetch("./api/manage/check", requestOptions)
+      fetch("./api/f4e84f8s4fe5f46s4fd5cvew4fgs4g845d/check", requestOptions)
         .then(response => response.text())
         .then(result => {console.log(result);
           if(result=="true"){
@@ -224,7 +224,7 @@
             
           }
           else{
-            window.location.href="./api/manage/login";
+            window.location.href="./api/f4e84f8s4fe5f46s4fd5cvew4fgs4g845d/login";
           }
         })
         .catch(error =>  {alert("An error occurred while synchronizing data with the server, please check the network connection");console.log('error', error)});
@@ -245,12 +245,12 @@
 };
 
 
-fetch("./api/manage/list", requestOptions)
+fetch("./api/f4e84f8s4fe5f46s4fd5cvew4fgs4g845d/list", requestOptions)
   //判断是否需要登录
   .then(response => {
     if(response.status==401){
       alert("请先登录");
-      window.location.href="./api/manage/login";
+      window.location.href="./api/f4e84f8s4fe5f46s4fd5cvew4fgs4g845d/login";
     }
     else{
       return response;
